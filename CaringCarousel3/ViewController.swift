@@ -52,12 +52,6 @@ class ViewController: UIViewController {
             collectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor)
         ])
     }
-    func snapToNearestCell(scrollView: UIScrollView) {
-         let middlePoint = Int(scrollView.contentOffset.x + UIScreen.main.bounds.width / 2)
-         if let indexPath = collectionView.indexPathForItem(at: CGPoint(x: middlePoint, y: 0)) {
-              collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-         }
-    }
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
